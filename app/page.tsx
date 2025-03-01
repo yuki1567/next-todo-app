@@ -1,5 +1,11 @@
 import InputForm from "@/components/InputForm";
+import TodoList from "@/components/TodoList";
 
 export default function Home() {
-  return <InputForm />;
+  return (
+    <div>
+      <InputForm />
+      <TodoList />
+    </div>
+  );
 }
