@@ -4,4 +4,12 @@
   body {
     @apply m-0 p-0 box-border font-sans text-gray-800 w-screen h-screen bg-gradient-to-br from-white via-white to-blue-200;
   }
+
+  form {
+    @apply flex items-stretch w-80;
+  }
+
+  button {
+    @apply border-none p-0.5 rounded-sm;
+  }
 }
