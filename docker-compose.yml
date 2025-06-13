@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:8.0.32
+    hostname: "${DB_HOST}"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    env_file:
+      - .env
+    volumes:
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf # ローカルのmy.cnfをマウント
+    ports:
+      - "${DB_PORT}:3306"
